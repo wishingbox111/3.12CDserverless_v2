@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "save-dev": "^0.0.1-security",
     "serverless": "^3.34.0"
   },
   "devDependencies": {
