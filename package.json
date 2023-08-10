@@ -13,5 +13,13 @@
   },
   "devDependencies": {
     "serverless-offline": "^12.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wishingbox111/3.12CDserverless_v2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wishingbox111/3.12CDserverless_v2/issues"
+  },
+  "homepage": "https://github.com/wishingbox111/3.12CDserverless_v2#readme"
 }
