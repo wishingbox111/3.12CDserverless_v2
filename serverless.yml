@@ -1,5 +1,5 @@
 # CHANGE-TO-YOURNAME-aws-node-http-api-project to your repo name! in line 2, service.
-service: 3-12-cdserverlessv2ec
+service: ec3-12-cdserverlessv2
 frameworkVersion: '3'
 
 provider:
