@@ -7,6 +7,14 @@ on:
 
 jobs:
   pre-deploy:
-    runs-on: ubuntu-lastest
+    runs-on:ubuntu-lastest
     steps:
       - run: echo "The job is automatically triggered by a ${{ github.event.name }} event."
+
+  install-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+      - uses: actions/checkout@v3
+      - name: Run installation of dependencies commands
+        run: npm install

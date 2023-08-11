@@ -13,6 +13,7 @@ runs on is the configuration
 
 predeploy is not a keyword, and can be anything - it'll appear on the pipeline. 
 
+install-dependencies is a few job, so the indentation needs to be correct with all other jobs.
 
 ___________code--------
 
@@ -29,6 +30,12 @@ jobs:
     steps:
       - run: echo "The job is automatically triggered by a ${{ github.event.name }} event."
 
-  
+  install-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+      - uses: actions/checkout@v3
+      - name: Run installation of dependencies commands
+        run: npm install
 
   
