@@ -14,7 +14,7 @@ runs on is the configuration
 predeploy is not a keyword, and can be anything - it'll appear on the pipeline. 
 
 
-___________code----------
+___________code--------
 
 name: CICD for Serverless Application-title of action
 run-name: ${{github.actor}} is doing CICD for serverless application
@@ -23,6 +23,12 @@ on:
   push:
     branches: [ main, "*"]
 
+jobs:
+  pre-deploy:
+    runs-on:ubuntu-lastest
+    steps:
+      - run: echo "The job is automatically triggered by a ${{ github.event.name }} event."
 
+  
 
   
