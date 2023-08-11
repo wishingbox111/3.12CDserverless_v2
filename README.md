@@ -128,3 +128,30 @@ in terminal (admin powershell)
 type: serverless deploy
 
 sls deploy - is also the same
+
+
+-----------------------------------
+
+add the deployment to lambda with a deploy in main.yml
+
+
+
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    needs: unit-testing
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - name: serverless deploy
+        uses: serverless/github-action@v3.2
+        with:
+          args: deploy
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secret.AWS_ACCESS_KEY_ID}}
+          AWS_SECRET_ACCESS_KEY: {{ secret.AWS_SECRET_ACCESS_KEY}}
