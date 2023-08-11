@@ -130,9 +130,14 @@ type: serverless deploy
 sls deploy - is also the same
 
 
+
 -----------------------------------
 
 add the deployment to lambda with a deploy in main.yml
+
+before deploy, remember to add the .serverless to .git ignore so that the .serverless with lots of files is not uploaded into github.
+
+![Alt text](image-2.png)
 
 
 
@@ -156,6 +161,7 @@ add the deployment to lambda with a deploy in main.yml
           AWS_ACCESS_KEY_ID: ${{ secret.AWS_ACCESS_KEY_ID}}
           AWS_SECRET_ACCESS_KEY: {{ secret.AWS_SECRET_ACCESS_KEY}}
 
-*** my title cannot be 3.12cdserverless_v2, it can only use hypen and not underscore
+*** my title cannot be 3.12cdserverless_v2, it can only use hypen and not underscore and the start cannot be a number , it has to start with an alphabet.
 
           ----------------------
+
