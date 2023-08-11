@@ -118,6 +118,7 @@ after adding the needs: in each job-
 
         The action will be horizontal flow, without the needs it'll be a one box by one box one after another like this:
 
-        ![Alt text](image-1.png)
+        <img width="854" alt="image" src="https://github.com/wishingbox111/3.12CDserverless_v2/assets/121477591/a0279c64-508c-4b12-80f7-1cb109214298">
+
         
         
