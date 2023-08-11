@@ -111,6 +111,8 @@ jobs:
       - name: Run unit testing command
         run: npm test
 
+  
+
 # added unit-testing
 
 after adding the needs: in each job-
@@ -122,3 +124,7 @@ after adding the needs: in each job-
 
         
         
+in terminal (admin powershell)
+type: serverless deploy
+
+sls deploy - is also the same
