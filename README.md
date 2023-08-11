@@ -100,5 +100,24 @@ jobs:
         uses: actions/checkout@v3
       - name: Run installation of dependencies commands
         run: npm install
+
+  unit-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Run installation of dependencies commands # this covers npm install also so don't need the install-dependencies in the above block also!
+        run: npm install
       - name: Run unit testing command
         run: npm test
+
+# added unit-testing
+
+after adding the needs: in each job-
+        ![Alt text](image.png)
+
+        The action will be horizontal flow, without the needs it'll be a one box by one box one after another like this:
+
+        ![Alt text](image-1.png)
+        
+        
