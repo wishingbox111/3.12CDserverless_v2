@@ -156,6 +156,6 @@ add the deployment to lambda with a deploy in main.yml
           AWS_ACCESS_KEY_ID: ${{ secret.AWS_ACCESS_KEY_ID}}
           AWS_SECRET_ACCESS_KEY: {{ secret.AWS_SECRET_ACCESS_KEY}}
 
-
+*** my title cannot be 3.12cdserverless_v2, it can only use hypen and not underscore
 
           ----------------------
